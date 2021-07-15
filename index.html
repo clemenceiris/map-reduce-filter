@@ -23,7 +23,24 @@
       { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
     ];
 
+    //filter
 
+    const result = inventors.filter(function(inventor){
+      if(inventor.year >= 1500 && inventor.year < 1600) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+
+    console.table(result);
+
+    //map
+
+    //sort
+
+
+    //
   </script>
 </body>
 </html>
