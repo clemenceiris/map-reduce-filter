@@ -31,18 +31,24 @@
         return false;
       }
     });
-
     console.table(result);
 
     //map
     const fullNames = inventors.map(inventor => `${inventor.first}`);
-
     console.table(fullNames);
 
     //sort
+    const order = inventors.sort((a, b) => a.year > b.year ? 1 : -1);
+    console.table(order);
+
+    //reduce
+    //nombre d'années vécues par tous les inventeurs
+    const total = inventors.reduce((total, inventor)=> {
+      return total + (inventor.passed - inventor.year);
+    }, 0);
+    console.log(total);
 
 
-    //
   </script>
 </body>
 </html>
